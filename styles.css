@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(188, 244, 225);
+}
+
+.div-principal {
+  width: 40.6rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #11175e;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.cadastrar-section {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 100%;
+  max-width: 15.8rem;
+  height: 3rem;
+  font-size: 1rem;
+  padding-left: 1rem;
+  border-radius: 0.4rem;
+  border: 0.01rem solid #b1b2b1;
+}
+
+input:focus {
+  border: 0.12rem solid #2d70fd;
+  outline: none;
+}
+
+#cadastrar-item {
+  width: 3rem;
+  height: 3rem;
+  background: #2d70fd;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#cadastrar-item:hover {
+  background: #1a50b8;
+}
+
+/* Estilização das tarefas */
+.tarefa-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0.62rem;
+  margin: 0.31rem 0;
+  border-radius: 0.31rem;
+  border: 0.06rem solid #f0f0f0;
+  width: 100%;
+  height: auto;
+}
+
+.tarefa-texto {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: 0.62rem;
+}
+
+/* Nome da tarefa */
+.tarefa-texto p:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #11175e;
+}
+
+/* Container flexível para etiqueta e data */
+.etiqueta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo da etiqueta */
+.etiqueta-item {
+  background-color: #fff;
+  padding: 0.25rem 0.62rem;
+  border-radius: 0.75rem;
+  border: 1px solid #b1cbb7;
+  color: #b1bacb;
+  width: 4.18rem;
+  max-width: 70%;
+  height: 1.31rem;
+  margin-right: 0.4rem;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo da data com descrição */
+.etiqueta-data {
+  font-size: 0.9rem;
+  color: #b1bacb;
+  flex-grow: 1;
+}
+
+/* Botão Concluir */
+.btn-concluir {
+  background: #2d70fd;
+  color: #fff;
+  border: none;
+  padding: 0.31rem 0.62rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 7.5rem;
+  height: 2.75rem;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+}
+
+.btn-concluir:hover {
+  background: #1a50b8;
+}
+
+/* Estilo de tarefa concluída - apenas o nome */
+.concluido {
+  text-decoration: line-through;
+  color: #808080;
+}
+
+/* Estilo para imagem de tarefa concluída */
+.img-concluido {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 1.87rem;
+  height: 1.87rem;
+}
+
+.img-concluido:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos padrão para desktop já definidos acima */
+
+/* Responsividade para tablets (máximo de 768px) */
+@media (max-width: 768px) {
+  .div-principal {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  input {
+    max-width: 100%;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  #cadastrar-item {
+    width: 5.5rem;
+    height: 2.4rem;
+    font-size: 1.3rem;
+  }
+
+  .btn-concluir {
+    width: 6.5rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsividade para celulares (máximo de 480px) */
+@media (max-width: 480px) {
+  .div-principal {
+    width: 95%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .cadastrar-section {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  input {
+    width: 100%;
+    height: 3.12rem;
+    font-size: 0.85rem;
+  }
+
+  #cadastrar-item {
+    width: 100%;
+    height: 3.12rem;
+    font-size: 1.2rem;
+  }
+
+  .tarefa-item {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: .5rem;
+    height: 12.7rem;
+  }
+
+  .etiqueta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.4rem;
+  }
+
+  .btn-concluir {
+    width: 7.5rem;
+    height: 2.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0.4rem;
+  }
+}
