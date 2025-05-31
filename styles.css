@@ -165,7 +165,18 @@ input:focus {
   transform: scale(1.1);
 }
 
-/* Estilos padrão para desktop já definidos acima */
+/* Estilo do contador de tarefas concluídas */
+#contador-concluidas {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  width: fit-content;
+  align-self: flex-end;
+}
 
 /* Responsividade para tablets (máximo de 768px) */
 @media (max-width: 768px) {
@@ -230,7 +241,7 @@ input:focus {
   .tarefa-item {
     flex-direction: column;
     gap: 0.8rem;
-    padding: .5rem;
+    padding: 0.5rem;
     height: 12.7rem;
   }
 
